@@ -1,5 +1,7 @@
-Golang library for Playstation Dualshock 3 controller
-=====================================================
+Golang library for Playstation Dualshock 3 controller on Linux
+==============================================================
+
+This is a Linux-only package, relying on the /dev/input/ devices.
 
 When you call ctrl.Run(), it launches a Go routine to monitor the device.
 
@@ -8,6 +10,9 @@ struct with the changes.  There's an optional callback function whenever a
 change happens.
 
 It's been tested with the DualShock 3 connected via USB.
+
+Additionally, there are some example programs to monitor the device and to
+simulate keystrokes (using uinput).
 
 Structs
 -------
@@ -71,8 +76,3 @@ func main() {
 	})
 }
 ```
-
-TODO
-----
-
-[ ] Add support for the motion sensors (appears as a separate input device)
